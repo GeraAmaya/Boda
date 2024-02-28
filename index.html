@@ -33,6 +33,10 @@
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="51">
+
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v19.0" nonce="qNRcEW0k"></script>
+
     <!-- Navbar Start -->
     <nav class="navbar fixed-top shadow-lg navbar-expand-lg bg-light navbar-light py-3 py-lg-3 px-lg-5">
         <a href="index.html" class="navbar-brand d-block d-lg-none">
@@ -52,6 +56,7 @@
                 <a href="#plan" class="nav-item nav-link">Horarios</a>
                 <a href="#info" class="nav-item nav-link">Info importante</a>
                 <a href="#rsvp" class="nav-item nav-link">Confirmar asistencia</a>
+                <a href="#msj" class="nav-item nav-link">Dejanos tu mensaje</a>
             </div>
         </div>
     </nav>
@@ -362,7 +367,7 @@ Apreciamos enormemente tu apoyo, tu esfuerzo, y esperamos compartir este día ta
 
 
    <!--SECCION MENSAJES-->
-<div class="container-fluid bg-secondary py-5" id="messageSection">
+<div class="container-fluid bg-secondary py-5" id="msj">
     <div class="container py-5">
         <div class="section-title position-relative text-center">
             <h1 class="font-secondary display-4">Dejanos un mensajito! 
@@ -371,7 +376,7 @@ Apreciamos enormemente tu apoyo, tu esfuerzo, y esperamos compartir este día ta
         <div class="row">
 
             
-              </div>
+            <div class="fb-comments" data-href="https://boda-five.vercel.app/" data-width="100%" data-numposts="5"></div>
            
           
            
