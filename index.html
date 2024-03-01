@@ -31,7 +31,7 @@
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             var audio = document.getElementById("myAudio");
-
+    
             function playPause() {
                 if (audio.paused) {
                     audio.play();
@@ -39,11 +39,16 @@
                     audio.pause();
                 }
             }
-
-            // Añadir evento click al botón
-            var playPauseButton = document.getElementById("playPauseButton");
-            playPauseButton.addEventListener("click", playPause);
-
+    
+            // Añadir evento click a cada botón
+            var playPauseButton1 = document.getElementById("playPauseButton1");
+            var playPauseButton2 = document.getElementById("playPauseButton2");
+            var playPauseButton3 = document.getElementById("playPauseButton3");
+    
+            playPauseButton1.addEventListener("click", playPause);
+            playPauseButton2.addEventListener("click", playPause);
+            playPauseButton3.addEventListener("click", playPause);
+    
             // Función para iniciar la música automáticamente al cargar la página
             audio.play();
         });
@@ -113,7 +118,8 @@
                             <a href="https://logwork.com/countdown-y3jx" class="countdown-timer" data-style="columns" data-timezone="Europe/Madrid" data-language="es" data-textcolor="#ffffff" data-date="2025-04-12 19:00" data-digitscolor="#ffffff" data-unitscolor="#ffffff">Faltan</a>
                         </div>
                         <div class="text-center mt-1" >
-                            <button id="playPauseButton" class="btn btn-primary" style="border-radius: 15px;"><i class="fas fa-volume-mute"></i></button>
+                            <button id="playPauseButton1" class="btn btn-primary" style="border-radius: 15px;"><i class="fas fa-volume-mute"></i></button>
+                            <p>Dale Play!</p>
                         </div>
                     </div>
                 </div>
@@ -129,8 +135,10 @@
                             <a href="https://logwork.com/countdown-y3jx" class="countdown-timer" data-style="columns" data-timezone="Europe/Madrid" data-language="es" data-textcolor="#ffffff" data-date="2025-04-12 19:00" data-digitscolor="#ffffff" data-unitscolor="#ffffff">Faltan</a>
                         </div>
                         <div class="text-center mt-1" >
-                            <button id="playPauseButton" class="btn btn-primary" style="border-radius: 15px;"><i class="fas fa-volume-mute"></i></button>
+                            <button id="playPauseButton2" class="btn btn-primary" style="border-radius: 15px;"><i class="fas fa-volume-mute"></i></button>
+                            <p>Dale Play!</p>
                         </div>
+
                     </div>
                 </div>
                 <div class="carousel-item position-relative" style="height: 100vh; min-height: 400px;">
@@ -145,7 +153,8 @@
                             <a href="https://logwork.com/countdown-y3jx" class="countdown-timer" data-style="columns" data-timezone="Europe/Madrid" data-language="es" data-textcolor="#ffffff" data-date="2025-04-12 19:00" data-digitscolor="#ffffff" data-unitscolor="#ffffff">Faltan</a>
                         </div>
                         <div class="text-center mt-1" >
-                            <button id="playPauseButton" class="btn btn-primary" style="border-radius: 15px;"><i class="fas fa-volume-mute"></i></button>
+                            <button id="playPauseButton3" class="btn btn-primary" style="border-radius: 15px;"><i class="fas fa-volume-mute"></i></button>
+                            <p>Dale Play!</p>
                         </div>
                     </div>
                 </div>
