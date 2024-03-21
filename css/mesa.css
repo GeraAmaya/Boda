@@ -1,0 +1,103 @@
+/* Estilos CSS */
+
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+
+.great-vibes-regular {
+    font-family: "Great Vibes", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+
+
+
+
+
+body {
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #818491;
+    text-align: left;
+    background-color: #818491;
+  }
+
+
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card {
+    width: calc(50% - 20px);
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-top: 10px;
+}
+
+
+h1 {
+    text-align: center;
+    margin-top: 2px;
+    font-family: "Great Vibes", cursive;
+    font-weight: 400;
+  font-size: 30px;
+    font-style: oblique;
+}
+
+.tira{
+
+margin-left: 90px;
+}
+
+.table {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.table img {
+    width: 130px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.guest-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 10px;
+}
+
+.guest-list li {
+    margin-bottom: 5px;
+}
+
+/* Media queries para hacerlos más responsivos */
+@media screen and (max-width: 768px) {
+    .card {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .table img {
+        width: 50px;
+    }
+
+    .card {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
