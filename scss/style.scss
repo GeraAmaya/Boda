@@ -75,6 +75,12 @@ $border-width: 2px;
     animation: action 1s infinite alternate;
 }
 
+.img-rounded {
+    border-radius: 10px; /* Ajusta el valor según lo redondeado que desees que sea el borde */
+}
+
+
+
 @-webkit-keyframes action {
     0% {
         transform: translateY(0);
