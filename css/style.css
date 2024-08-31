@@ -198,6 +198,11 @@ img {
   
 }
 
+.custom-border {
+  border: 3px solid #333; /* Color, grosor, y estilo del borde */
+  border-radius: 15px; /* Ajusta el valor para redondear las esquinas */
+}
+
 svg {
   overflow: hidden;
   vertical-align: middle;
