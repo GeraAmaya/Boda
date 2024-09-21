@@ -111,8 +111,7 @@
         <div id="header-carousel" class="carousel slide carousel-fade" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item position-relative active" style="height: 100vh; min-height: 200px;">
-        
-                    <img class="position-absolute w-100 h-100 " src="img/portada.jpg" style="object-fit: initial; ">
+                    <img class="position-absolute w-100 h-100" src="img/portada.jpg" style="object-fit: cover;">
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 900px;">
                             <h1 class="display-1 font-secondary text-white mt-n3 mb-md-4">Victoria & Gerardo</h1>
@@ -122,12 +121,29 @@
                             </div>
                             <a href="https://logwork.com/countdown-y3jx" class="countdown-timer" data-style="columns" data-timezone="Europe/Madrid" data-language="es" data-textcolor="#ffffff" data-date="2025-10-11 20:30" data-digitscolor="#ffffff" data-unitscolor="#ffffff">Faltan</a>
                         </div>
-                        <div class="text-center mt-1" >
-                            <button id="playPauseButton1" class="btn btn-primary" style="border-radius: 15px;"><i class="fas fa-pause"></i></button>
+                        <div class="text-center mt-1">
+                            <button id="playPauseButton1" class="btn btn-primary" style="border-radius: 15px;">
+                                <i class="fas fa-pause"></i>
+                            </button>
                             <p>Dale Play!</p>
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        /* Media query para dispositivos móviles */
+        @media (max-width: 768px) {
+            .carousel-item {
+                height: 60vh; /* Reduce la altura en pantallas pequeñas */
+            }
+            img.position-absolute {
+                object-fit: cover; /* Asegura que la imagen se ajuste sin distorsionarse */
+            }
+        }
+        </style>
 <!--
                 <div class="carousel-item position-relative" style="height: 100vh; min-height: 400px;">
                     <img class="position-absolute w-100 h-100" src="img/4.jpeg" style="object-fit: inherit; ">
