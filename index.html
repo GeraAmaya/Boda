@@ -27,41 +27,11 @@
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
 
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+   
 
-    <!--scrip reproductor-->
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            var audio = document.getElementById("myAudio");
     
-            function playPause() {
-                if (audio.paused) {
-                    audio.play();
-                } else {
-                    audio.pause();
-                }
-            }
-    
-            // Añadir evento click a cada botón
-            var playPauseButton1 = document.getElementById("playPauseButton1");
-            var playPauseButton2 = document.getElementById("playPauseButton2");
-            var playPauseButton3 = document.getElementById("playPauseButton3");
-    
-            playPauseButton1.addEventListener("click", playPause);
-            playPauseButton2.addEventListener("click", playPause);
-            playPauseButton3.addEventListener("click", playPause);
-    
-            // Función para iniciar la música automáticamente al cargar la página
-            audio.play();
-        });
-    </script>
-    <!--Fin scrip reproductor-->
 
-    <!-- Facebook SDK script -->
-    <div id="fb-root"></div>
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v19.0" nonce="hbBgW75x"></script>
-    <!--End script facebook-->
+    
 </head>
 
 
@@ -73,10 +43,7 @@
         <source src="./img/audio.3gp" type="audio/mp3">
     </audio>
 
-<!--script facebook-->
-    <div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v19.0" nonce="hbBgW75x"></script>
-<!--End script facebook-->
+
 
 
     <!-- Navbar Start -->
@@ -522,6 +489,43 @@ Apreciamos enormemente tu esfuerzo, tu apoyo, y esperamos compartir este día ta
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+
+    <!--script facebook-->
+    <div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v19.0" nonce="hbBgW75x"></script>
+<!--End script facebook-->
+
+
+ <!-- jQuery -->
+ <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+ <!--scrip reproductor-->
+ <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var audio = document.getElementById("myAudio");
+
+        function playPause() {
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+            }
+        }
+
+        // Añadir evento click a cada botón
+        var playPauseButton1 = document.getElementById("playPauseButton1");
+        var playPauseButton2 = document.getElementById("playPauseButton2");
+        var playPauseButton3 = document.getElementById("playPauseButton3");
+
+        playPauseButton1.addEventListener("click", playPause);
+        playPauseButton2.addEventListener("click", playPause);
+        playPauseButton3.addEventListener("click", playPause);
+
+        // Función para iniciar la música automáticamente al cargar la página
+        audio.play();
+    });
+</script>
+<!--Fin scrip reproductor-->
     
 
 
