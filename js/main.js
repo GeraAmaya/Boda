@@ -2,22 +2,13 @@
     "use strict";
 
 
-    // Una vez que el DOM esté listo, ocultamos el contenido principal por seguridad
-  document.addEventListener("DOMContentLoaded", function() {
-    document.getElementById('main-content').style.display = 'none';
-  });
-
-  // Cuando toda la página esté completamente cargada (incluyendo imágenes, scripts, etc.)
-  window.addEventListener('load', function() {
-    // Oculta el loader
-    document.getElementById('loader').classList.add('hidden');
-    
-    // Muestra el contenido principal
-    document.getElementById('main-content').style.display = 'block';
-    
-    // Reactiva el scroll
-    document.body.style.overflow = 'auto';
-  });
+    // Simulación de carga
+    window.addEventListener('load', () => {
+        setTimeout(() => {
+            document.getElementById('loader').style.display = 'none';
+            document.getElementById('content').style.display = 'block';
+        }, 4000); // 4 segundos de duración
+    });
 
 
 

@@ -64,30 +64,120 @@ body {
   background-color: #FFFFFF;
 }
 
-/*LOADER*/
-* Estilos para el contenedor del loader */
-.loader-container {
+/* Loader de pantalla completa */
+#loader {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-image: url('ruta-de-tu-imagen.jpg'); /* Cambia esta URL por la de tu imagen */
-  background-size: cover;  /* La imagen cubrirá toda la pantalla */
-  background-position: center;
-  z-index: 9999; /* Asegúrate de que el loader esté por encima de todo */
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom right, #f8f5f2, #f1e9e5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 9999;
+}
+
+/* Contenido del loader */
+.loader-content {
+  position: relative;
+  text-align: center;
+}
+
+/* Anillos giratorios */
+.rings {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  width: 150px;
+  height: 150px;
 }
 
-/* Estilos para ocultar el loader una vez que la página se ha cargado */
-.hidden {
-  display: none;
+.ring {
+  border: 4px solid gold;
+  border-radius: 50%;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  animation: spin 4s linear infinite;
 }
 
+.ring:first-child {
+  width: 80px;
+  height: 80px;
+  animation: spin 4s linear infinite reverse;
+}
 
+/* Mensaje */
+.message {
+  margin-top: 20px;
+  font-size: 1.5em;
+  color: #a47e3b;
+  font-family: 'Georgia, serif';
+  animation: fadeIn 2s ease-in-out infinite alternate;
+}
 
+/* Pétalos cayendo */
+.petals {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.petals::before, .petals::after {
+  content: '💐';
+  position: absolute;
+  font-size: 2em;
+  opacity: 0.5;
+  animation: fall 5s infinite;
+}
+
+.petals::before {
+  left: 25%;
+  animation-duration: 6s;
+  animation-delay: 0s;
+}
+
+.petals::after {
+  left: 75%;
+  animation-duration: 4s;
+  animation-delay: 1s;
+}
+
+/* Animaciones */
+@keyframes spin {
+  from {
+      transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+@keyframes fall {
+  0% {
+      top: -20%;
+      opacity: 0.5;
+  }
+  100% {
+      top: 100%;
+      opacity: 0;
+  }
+}
 /* FIN LOADER */
 
 
