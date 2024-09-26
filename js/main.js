@@ -1,6 +1,27 @@
 (function ($) {
     "use strict";
 
+
+    // Una vez que el DOM esté listo, ocultamos el contenido principal por seguridad
+  document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById('main-content').style.display = 'none';
+  });
+
+  // Cuando toda la página esté completamente cargada (incluyendo imágenes, scripts, etc.)
+  window.addEventListener('load', function() {
+    // Oculta el loader
+    document.getElementById('loader').classList.add('hidden');
+    
+    // Muestra el contenido principal
+    document.getElementById('main-content').style.display = 'block';
+    
+    // Reactiva el scroll
+    document.body.style.overflow = 'auto';
+  });
+
+
+
+
     // Navbar on scrolling
     $(window).scroll(function () {
         if ($(this).scrollTop() > 200) {

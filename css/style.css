@@ -64,6 +64,36 @@ body {
   background-color: #FFFFFF;
 }
 
+/*LOADER*/
+* Estilos para el contenedor del loader */
+.loader-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('ruta-de-tu-imagen.jpg'); /* Cambia esta URL por la de tu imagen */
+  background-size: cover;  /* La imagen cubrirá toda la pantalla */
+  background-position: center;
+  z-index: 9999; /* Asegúrate de que el loader esté por encima de todo */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Estilos para ocultar el loader una vez que la página se ha cargado */
+.hidden {
+  display: none;
+}
+
+
+
+/* FIN LOADER */
+
+
+
+
+
 [tabindex="-1"]:focus:not(:focus-visible) {
   outline: 0 !important;
 }
