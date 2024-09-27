@@ -2,13 +2,16 @@
     "use strict";
 
 
-    // Simulación de carga
-    window.addEventListener('load', () => {
+  // Simulación de carga
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+        document.getElementById('loader').style.opacity = '0';
         setTimeout(() => {
             document.getElementById('loader').style.display = 'none';
             document.getElementById('content').style.display = 'block';
-        }, 4000); // 4 segundos de duración
-    });
+        }, 1000); // Transición suave de 1 segundo
+    }, 6000); // 4 segundos de duración del loader
+});
 
 
 

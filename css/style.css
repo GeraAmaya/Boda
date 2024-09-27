@@ -64,6 +64,7 @@ body {
   background-color: #FFFFFF;
 }
 
+
 /* Loader de pantalla completa */
 #loader {
   position: fixed;
@@ -71,113 +72,40 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to bottom right, #f8f5f2, #f1e9e5);
+  background: #d9a7c7;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #fffcdc, #d9a7c7);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #fffcdc, #d9a7c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ 
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   z-index: 9999;
+  opacity: 1;
+  transition: opacity 1s ease-in-out; /* Transición suave al desaparecer */
 }
 
 /* Contenido del loader */
 .loader-content {
   position: relative;
   text-align: center;
+  max-width: 600px;
+  margin-top: 15px;
+ 
+
 }
 
-/* Anillos giratorios */
-.rings {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  width: 150px;
-  height: 150px;
-}
+.loader-content img{
 
-.ring {
-  border: 4px solid gold;
-  border-radius: 50%;
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  animation: spin 4s linear infinite;
-}
-
-.ring:first-child {
-  width: 80px;
-  height: 80px;
-  animation: spin 4s linear infinite reverse;
-}
-
-/* Mensaje */
-.message {
-  margin-top: 20px;
-  font-size: 1.5em;
-  color: #a47e3b;
-  font-family: 'Georgia, serif';
-  animation: fadeIn 2s ease-in-out infinite alternate;
-}
-
-/* Pétalos cayendo */
-.petals {
-  position: absolute;
   width: 100%;
   height: 100%;
-  top: 0;
-  left: 0;
-  pointer-events: none;
+  object-fit: cover; /* La imagen se ajusta a todo el contenedor sin deformarse */
+  object-position: center; /* Centra la imagen dentro del contenedor */
 }
 
-.petals::before, .petals::after {
-  content: '💐';
-  position: absolute;
-  font-size: 2em;
-  opacity: 0.5;
-  animation: fall 5s infinite;
-}
 
-.petals::before {
-  left: 25%;
-  animation-duration: 6s;
-  animation-delay: 0s;
-}
 
-.petals::after {
-  left: 75%;
-  animation-duration: 4s;
-  animation-delay: 1s;
-}
 
-/* Animaciones */
-@keyframes spin {
-  from {
-      transform: rotate(0deg);
-  }
-  to {
-      transform: rotate(360deg);
-  }
-}
 
-@keyframes fadeIn {
-  from {
-      opacity: 0;
-  }
-  to {
-      opacity: 1;
-  }
-}
-
-@keyframes fall {
-  0% {
-      top: -20%;
-      opacity: 0.5;
-  }
-  100% {
-      top: 100%;
-      opacity: 0;
-  }
-}
 /* FIN LOADER */
 
 
@@ -497,6 +425,16 @@ h1, h2, h3, h4, h5, h6,
 h1, .h1 {
   font-size: 2.5rem;
 }
+@media (max-width: 1200px){
+#loader{
+  width: 100%;
+  height: 100%;
+}
+
+}
+
+
+
 
 @media (max-width: 1200px) {
   h1, .h1 {
