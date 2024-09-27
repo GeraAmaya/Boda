@@ -84,25 +84,64 @@ body {
   transition: opacity 1s ease-in-out; /* Transición suave al desaparecer */
 }
 
+/* Loader de pantalla completa */
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom right, #f8f5f2, #f1e9e5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 9999;
+  opacity: 1;
+  transition: opacity 1s ease-in-out; /* Transición suave al desaparecer */
+}
+
 /* Contenido del loader */
 .loader-content {
   position: relative;
   text-align: center;
-  max-width: 600px;
-  margin-top: 15px;
- 
-
+  max-width: 80%; /* Ajusta el tamaño máximo del contenedor */
+  max-height: 80%; /* Ajusta el tamaño máximo del contenedor */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.loader-content img{
-
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* La imagen se ajusta a todo el contenedor sin deformarse */
-  object-position: center; /* Centra la imagen dentro del contenedor */
+/* Imagen del loader */
+.loader-content img {
+  width: auto; /* Ajusta la imagen para que respete las proporciones */
+  height: 100%; /* Ocupará toda la altura disponible */
+  max-width: 100%; /* Se ajusta dentro del contenedor */
+  object-fit: contain; /* La imagen se ajusta dentro del contenedor manteniendo su proporción */
+  margin-top: 0; /* Evita margen superior */
 }
 
+/* Ajustes para dispositivos móviles */
+@media (max-width: 768px) {
+  .loader-content {
+      max-width: 100%; /* Aumenta el ancho máximo del contenedor */
+      max-height: 100%; /* Aumenta la altura máxima del contenedor */
+  }
 
+  .loader-content img {
+      width: auto; /* Mantiene la imagen en proporción */
+      height: 100%; /* Ocupará el 90% de la altura del contenedor */
+      max-width: 95%; /* Ocupará el 90% del ancho del contenedor */
+      object-fit: contain; /* Se ajusta dentro del contenedor sin distorsionarse */
+  }
+}
+
+/* Estilo del contenido principal (inicialmente oculto) */
+#content {
+  display: block;
+  opacity: 1;
+}
 
 
 

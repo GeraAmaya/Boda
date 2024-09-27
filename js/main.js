@@ -2,17 +2,16 @@
     "use strict";
 
 
-  // Simulación de carga
+  // Simulación de carga con duración de 5 segundos
   window.addEventListener('load', () => {
     setTimeout(() => {
-        document.getElementById('loader').style.opacity = '0';
+        document.getElementById('loader').style.opacity = '0'; // Inicia la transición de desvanecimiento
         setTimeout(() => {
-            document.getElementById('loader').style.display = 'none';
-            document.getElementById('content').style.display = 'block';
-        }, 1000); // Transición suave de 1 segundo
-    }, 6000); // 4 segundos de duración del loader
+            document.getElementById('loader').style.display = 'none'; // Esconde el loader completamente
+            document.getElementById('content').style.display = 'block'; // Muestra el contenido principal
+        }, 1000); // Duración de la transición de desvanecimiento
+    }, 5000); // 5 segundos de duración del loader
 });
-
 
 
 
