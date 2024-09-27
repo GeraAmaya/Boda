@@ -2,8 +2,8 @@
     "use strict";
 
 
-  // Simulación de carga con duración de 5 segundos
-  window.addEventListener('load', () => {
+ // Simulación de carga con duración de 5 segundos
+ window.addEventListener('load', () => {
     setTimeout(() => {
         document.getElementById('loader').style.opacity = '0'; // Inicia la transición de desvanecimiento
         setTimeout(() => {
