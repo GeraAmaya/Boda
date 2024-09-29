@@ -40,14 +40,15 @@
 
 <body data-spy="scroll" data-target=".navbar" data-offset="51">
    
-      <!-- Loader de pantalla completa -->
+      <!-- Loader de pantalla completa  -->
+
     <div id="loader">
         <div class="loader-content">
            
            <img src="/img/Invitación.png" alt="">
         </div>
     </div>
-
+   
 
 
     <audio id="myAudio">
@@ -323,7 +324,7 @@ Elegimos la Iglesia Nuestra Señora de Loreto para casarnos porque tiene un sign
                   
 Hemos establecido un precio de tarjeta de $60.000 por adulto. Los niños de 3 a 10 años pagaran una tarjeta de $25.000. Estas tarifas estarán vigentes hasta Febrero de 2025, momento en el cual podrían experimentar ajuste, como asi también en Mayo 2025.
 
-Entendemos la importancia de la planificación financiera y queremos ofrecerte opciones flexibles de pago. Puedes abonar en dos tramos para mayor comodidad. Ten en cuenta que el valor de la tarjeta puede ajustarse con el tiempo, el pago se ajustará según el valor vigente en ese momento. El tiempo límite para completar el pagos es septiembre de 2025.
+Entendemos la importancia de la planificación financiera y queremos ofrecerte opciones flexibles de pago. Puedes abonar en tramos para mayor comodidad. Ten en cuenta que el valor de la tarjeta puede ajustarse con el tiempo, el pago se ajustará según el valor vigente en ese momento. El tiempo límite para completar el pagos es septiembre de 2025.
 
 Apreciamos enormemente tu esfuerzo, tu apoyo, y esperamos compartir este día tan especial con vos. ¡Tu presencia será el mejor regalo que podamos recibir!
 </p>  
@@ -344,17 +345,96 @@ Apreciamos enormemente tu esfuerzo, tu apoyo, y esperamos compartir este día ta
     <!--End Info important-->
 
     <div class="row bg-secondary" id="">
-        <div class="col-md-6 border-right border-primary">
-            <div class="text-center text-md-right mr-md-3 mb-4 mb-md-0">
-                <a href="https://mpago.la/2ZqkBEf" target="_blank"><img class="card-img-fluid mb-4 rounded-lg" style="height: 400px; width: 350px;" src="img/parcial.png" alt=""></a>
+        <div class="row justify-content-center">
+
+            <div class="col-md-5 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <img class="card-img-top" src="img/parcial.png" alt="Parcial" style="height: 400px; object-fit: cover;">
+                    <div class="card-body text-center">
+                        <a href="https://mpago.la/2ZqkBEf" target="_blank" class="btn btn-link custom-btn">Ver Parcial</a>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="col-md-5 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <img class="card-img-top" src="img/total.png" alt="Total" style="height: 400px; object-fit: cover;">
+                    <div class="card-body text-center">
+                        <a href="https://mpago.la/1SogCrg" target="_blank" class="btn btn-link custom-btn">Ver Total</a>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="col-md-6">
-            <div class="text-center text-md-left ml-md-">
-                <a href="https://mpago.la/1SogCrg" target="_blank"><img class="card-img-fluid mb-4 rounded-lg" style="height: 400px; width: 350px;" src="img/total.png" alt=""></a>
+        
+        <div class="col-12 mt-4 text-center">
+            <div class="alias-box p-3 border rounded">
+                <p class="mb-2">Alias: <strong>viki.gera.boda</strong></p>
+                <button class="btn btn-sm btn-primary" onclick="copyAlias()">Copiar Alias</button>
             </div>
         </div>
-    </div>
+        
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script>
+            function copyAlias() {
+                const alias = 'viki.gera.boda';
+                navigator.clipboard.writeText(alias).then(() => {
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Alias copiado',
+                        text: 'El alias ha sido copiado al portapapeles',
+                        confirmButtonText: 'Ok'
+                    });
+                });
+            }
+        </script>
+        
+        <style>
+            .custom-btn {
+                color: #ADD8E6; /* Celeste claro */
+                font-size: 16px;
+                padding: 8px 16px;
+                text-transform: uppercase;
+            }
+        
+            .alias-box {
+                display: inline-block;
+                background-color: #f8f9fa; /* Color de fondo del recuadro */
+            }
+        
+            .card {
+                margin-left: 10px;
+                margin-right: 10px;
+                object-fit: cover; 
+                    object-position: center; 
+                    margin-bottom: 20px;
+                  
+                
+            }
+        
+            .row {
+                margin-left: 0;
+                margin-right: 0;
+            }
+        
+            @media (max-width: 468px) {
+                .card  {
+                    object-fit: cover; 
+                    object-position: center; 
+                    margin-bottom: 20px;
+                 
+                }
+
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+             
+            }
+        </style>
+        
+
+</div>
+
     
 
     <!-- RSVP Start -->
