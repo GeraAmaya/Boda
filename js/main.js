@@ -10,7 +10,7 @@
             document.getElementById('loader').style.display = 'none'; // Esconde el loader completamente
             document.getElementById('content').style.display = 'block'; // Muestra el contenido principal
         }, 1000); // Duración de la transición de desvanecimiento
-    }, 5000); // 5 segundos de duración del loader
+    }, 7000); // 5 segundos de duración del loader
 });
 
 
