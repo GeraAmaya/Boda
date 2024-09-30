@@ -2,18 +2,19 @@
     "use strict";
 
 
- // Simulación de carga con duración de 5 segundos
- window.addEventListener('load', () => {
+ // Simulación de carga con duración de 7 segundos
+window.addEventListener('load', () => {
     setTimeout(() => {
-        document.getElementById('loader').style.opacity = '0'; // Inicia la transición de desvanecimiento
+        // Inicia la transición de desvanecimiento
+        document.getElementById('loader').style.opacity = '0'; 
         setTimeout(() => {
-            document.getElementById('loader').style.display = 'none'; // Esconde el loader completamente
-            document.getElementById('content').style.display = 'block'; // Muestra el contenido principal
+            // Esconde el loader completamente
+            document.getElementById('loader').style.display = 'none'; 
+            // Permite mostrar el contenido de la página
+            document.body.style.overflow = 'auto'; 
         }, 1000); // Duración de la transición de desvanecimiento
-    }, 7000); // 5 segundos de duración del loader
+    }, 7000); // 7 segundos de duración del loader
 });
-
-
 
 
 
