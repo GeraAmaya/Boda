@@ -13,7 +13,7 @@ window.addEventListener('load', () => {
             // Permite mostrar el contenido de la página
             document.body.style.overflow = 'auto'; 
         }, 1000); // Duración de la transición de desvanecimiento
-    }, 1000); // 7 segundos de duración del loader
+    }, 6000); // 7 segundos de duración del loader
 });
 
 
